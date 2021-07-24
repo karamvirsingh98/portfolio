@@ -1,18 +1,18 @@
 .App {
-  box-sizing: border-box;
-  display: grid;
   color: #EAF2EF;
+  box-sizing: border-box;
   height: 100vh;
-  overflow-y: hidden;
+  width: 100vw;
+  display: grid;
 }
 
 .Topbar {
-  box-sizing: inherit;
   position: fixed;
+  box-sizing: inherit;
   top: 0;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
   padding: 1rem 2rem;
 }
 
@@ -26,7 +26,7 @@
 
 .TopbarButton { 
   text-decoration: none;
-  color: #EAF2EF;
+  color: inherit;
   transition: color 500ms;
 }
 
@@ -36,7 +36,10 @@
 }
 
 .ScrollContainer { 
+  display: flex;
+  flex-direction: column;
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
 }
 
@@ -47,11 +50,11 @@
 
 .HelloPage { 
   display: grid;
-  padding: 0rem 5rem;
+  padding: 0vh 5vh;
 }
 
 .AboutPage { 
   display: grid;
   gap: 2rem;
-  padding: 0rem 5rem;
+  padding: 0vh 5vh;
 }

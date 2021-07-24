@@ -1,19 +1,35 @@
 import { useInView } from "react-intersection-observer";
 import TextTrail from "../spring/TextTrail";
 
-function AboutPage() {
-  const { ref, inView } = useInView({ threshold: 0 })
+function AboutPage({ mobile }: { mobile: boolean }) {
+  const { ref, inView } = useInView({ threshold: 0 });
 
   return (
     <div id="about" className="AboutPage ScrollChild" ref={ref}>
       <TextTrail inView={inView}>
-        <div style={{ fontSize: "10rem" }}> I'm Karamvir, </div>
-        <div style={{ fontSize: "5rem", paddingLeft: '2rem', fontWeight: 200 }}>
-          A junior full stack developer, <br/> and UI / UX designer.
+        <div style={{ fontSize: mobile ? "13vw" : "10vw" }}>
+          {" "}
+          I'm Karamvir,{" "}
         </div>
-        <div style={{ fontSize: "2.5rem", fontWeight: 100, padding: '1rem 4rem' }}>
+        <div
+          style={{
+            fontSize: mobile ? "10vw" : "5vw",
+            paddingLeft: mobile ? "0vw" : "2vw",
+            fontWeight: 200,
+          }}
+        >
+          A junior full stack developer, {mobile ? "" : <br />} and UI / UX
+          designer.
+        </div>
+        <div
+          style={{
+            fontSize: mobile ? "7vw" : "2.5vw",
+            fontWeight: 100,
+            padding: mobile ? "0vw" : "1vw 4vw",
+          }}
+        >
           My work includes all forms of projects; from static websites,
-          <br/> to full featured Progressive Web Apps.
+          {mobile ? "" : <br />} to full featured Progressive Web Apps.
         </div>
       </TextTrail>
     </div>

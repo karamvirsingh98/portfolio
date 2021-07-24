@@ -1,19 +1,22 @@
 import { useInView } from "react-intersection-observer";
 import TextTrail from "../spring/TextTrail";
 
-function HelloPage() {
-  const { ref, inView } = useInView({ threshold: 0 })
+function HelloPage({ mobile }: { mobile: boolean }) {
+  const { ref, inView } = useInView({ threshold: 0 });
 
   return (
     <div className="HelloPage ScrollChild" ref={ref}>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <TextTrail inView={inView}>
-          <div style={{ fontSize: "20rem" }}>Hello</div>
-          <div style={{ fontSize: "20rem", paddingLeft: "11.4rem" }}>
-            There!
-          </div>
-        </TextTrail>
-      </div>
+      <TextTrail inView={inView}>
+        <div style={{ fontSize: mobile ? "25vw" : "20vw" }}>Hello</div>
+        <div
+          style={{
+            fontSize: mobile ? "25vw" : "20vw",
+            paddingLeft: mobile ? "0vw" : "11.5vw",
+          }}
+        >
+          There!
+        </div>
+      </TextTrail>
     </div>
   );
 }
