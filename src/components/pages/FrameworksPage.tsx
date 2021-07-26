@@ -14,7 +14,7 @@ export default function FrameworksPage({ mobile }: { mobile: boolean }) {
             flexDirection: "column",
           }}
         >
-          Here are some frameworks I use and love!
+          Scroll down for frameworks I use and love!
           <div
             style={{
               fontSize: mobile ? "5vw" : "2.5vw",
@@ -61,6 +61,18 @@ export default function FrameworksPage({ mobile }: { mobile: boolean }) {
           a variety of WebSocket implementations. 
         "
       />
+      <Framework
+        mobile={mobile}
+        website="https://www.typescriptlang.org/"
+        imageSrc="/images/frameworks/typescript.svg"
+        imageAlt="typescript"
+        title="Typescript"
+        description="
+          A language built on JavaScript that provides
+          strong typing, enabling a smoother development
+          flow, and superior in-editor debugging and error checking.
+        "
+      />
     </div>
   );
 }
@@ -76,7 +88,7 @@ function Framework({
   mobile: boolean;
   website: string;
   imageSrc: string;
-  imageAlt: string
+  imageAlt: string;
   title: string;
   description: string;
 }) {

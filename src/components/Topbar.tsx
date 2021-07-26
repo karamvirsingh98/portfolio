@@ -38,7 +38,7 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
                 style={{ placeItems: "center" }}
                 onClick={() => setOpen(!open)}
               >
-                <TextTrail inView={open}>
+                <TextTrail inView={open} quick>
                   <HashLink smooth to="/#about" className="TopbarButton">
                     About Me
                   </HashLink>
