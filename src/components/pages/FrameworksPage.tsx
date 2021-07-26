@@ -53,7 +53,7 @@ export default function FrameworksPage({ mobile }: { mobile: boolean }) {
         mobile={mobile}
         website="https://feathersjs.com/"
         imageSrc="/images/frameworks/feathers.svg"
-        imageAt="feathersjs"
+        imageAlt="feathersjs"
         title="Feathers"
         description="
           A powerful, isomorphic, micorservice based framework for 
