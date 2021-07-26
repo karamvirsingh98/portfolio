@@ -5,6 +5,8 @@ import { Switch, Route } from "react-router-dom";
 import AboutPage from "./components/pages/AboutPage";
 import { useState } from "react";
 import { useEffect } from "react";
+import ProjectsPage from "./components/pages/ProjectsPage";
+import FrameworksPage from "./components/pages/FrameworksPage";
 
 function App() {
   const [mobile, setMobile] = useState(window.innerWidth < 700 ? true : false);
@@ -18,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Topbar />
+      <Topbar mobile={mobile} />
       <Switch>
         <Route path="/" exact>
           <div className="ScrollContainer">
@@ -26,11 +28,11 @@ function App() {
             <AboutPage mobile={mobile} />
           </div>
         </Route>
-        <Route path="/technologies">
-          <div>Technologies</div>
-        </Route>
         <Route path="/projects">
-          <div>Projects</div>
+          <ProjectsPage mobile={mobile} />
+        </Route>
+        <Route path="/frameworks">
+          <FrameworksPage mobile={mobile} />
         </Route>
         <Route path="/blog">
           <div>Blog</div>

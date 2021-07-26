@@ -1,12 +1,12 @@
 import { useInView } from "react-intersection-observer";
 import TextTrail from "../spring/TextTrail";
 
-function HelloPage({ mobile }: { mobile: boolean }) {
+export default function HelloPage({ mobile }: { mobile: boolean }) {
   const { ref, inView } = useInView({ threshold: 0 });
 
   return (
     <div className="HelloPage ScrollChild" ref={ref}>
-      <TextTrail inView={inView}>
+      <TextTrail inView={inView} delay={150}>
         <div style={{ fontSize: mobile ? "25vw" : "20vw" }}>Hello</div>
         <div
           style={{
@@ -20,5 +20,3 @@ function HelloPage({ mobile }: { mobile: boolean }) {
     </div>
   );
 }
-
-export default HelloPage;

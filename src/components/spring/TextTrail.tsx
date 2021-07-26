@@ -1,17 +1,19 @@
 import { Children, Fragment, ReactNode } from "react";
 import { a, config, useTrail } from "@react-spring/web";
 
-function TextTrail({
+export default function TextTrail({
   inView,
+  delay,
   children,
 }: {
   inView: boolean;
+  delay?: number;
   children: ReactNode;
 }) {
   const items = Children.toArray(children);
   const trail = useTrail(items.length, {
     config: config.molasses,
-    delay: 250,
+    delay: delay,
     opacity: inView ? 1 : 0,
     x: inView ? 0 : 20,
     height: inView ? "100%" : "0%",
@@ -28,5 +30,3 @@ function TextTrail({
     </Fragment>
   );
 }
-
-export default TextTrail;
