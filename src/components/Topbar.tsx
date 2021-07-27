@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import TextTrail from "./spring/TextTrail";
+import { Divide as Menu } from 'hamburger-react'
 
 export default function Topbar({ mobile }: { mobile: boolean }) {
   const [open, setOpen] = useState(false);
@@ -25,14 +26,9 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
       )}
       {mobile && (
         <Fragment>
-          <img
-            src={open ? "/images/icons/cross.svg" : "/images/icons/menu.svg"}
-            alt="menu"
-            onClick={() => setOpen(!open)}
-            style={{ width: "30px", height: "30px" }}
-          />
+          <Menu toggled={open} toggle={setOpen} />
           {open && (
-            <div className="TopbarMobileContainer">
+            <div className='MenuContainer'>
               <div
                 className="TopbarButtons"
                 style={{ placeItems: "center" }}
