@@ -14,7 +14,7 @@ export default function TextTrail({
 }) {
   const items = Children.toArray(children);
   const trail = useTrail(items.length, {
-    config: quick ? config.gentle : config.molasses,
+    config: quick ? config.slow : config.molasses,
     delay: delay,
     opacity: inView ? 1 : 0,
     x: inView ? 0 : 20,
