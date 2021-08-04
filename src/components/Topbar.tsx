@@ -16,8 +16,8 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
           <Link className="TopbarButton" to="/projects">
             Projects
           </Link>
-          <Link className="TopbarButton" to="/frameworks">
-            Frameworks
+          <Link className="TopbarButton" to="/skills">
+            Skills
           </Link>
           <Link className="TopbarButton" to="/blog">
             Blog
@@ -30,19 +30,17 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
           {open && (
             <div className='MenuContainer'>
               <div
-                className="TopbarButtons"
-                style={{ placeItems: "center" }}
                 onClick={() => setOpen(!open)}
               >
-                <TextTrail inView={open} quick>
+                <TextTrail inView={open} quick className='TopbarButtons'>
                   <HashLink smooth to="/#about" className="TopbarButton">
                     About Me
                   </HashLink>
                   <Link className="TopbarButton" to="/projects">
                     Projects
                   </Link>
-                  <Link className="TopbarButton" to="/frameworks">
-                    Frameworks
+                  <Link className="TopbarButton" to="/skills">
+                    Skills
                   </Link>
                   <Link className="TopbarButton" to="/blog">
                     Blog
