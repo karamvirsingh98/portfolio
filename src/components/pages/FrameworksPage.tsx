@@ -118,7 +118,7 @@ function Framework({
         </ImageSpring>
       </a>
       <div>
-        <TextTrail inView={inView} delay={0} quick>
+        <TextTrail inView={inView} delay={100} quick>
           <div style={{ fontSize: mobile ? "10vw" : "6vw", fontWeight: 300 }}>
             {" "}
             {title}{" "}
