@@ -10,16 +10,16 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
     <div className="Topbar" style={{ padding: mobile ? "1rem" : "1rem 2rem" }}>
       {!mobile && (
         <div className="TopbarButtons" style={{ gridAutoFlow: "column" }}>
-          <HashLink smooth to="/#about" className="TopbarButton">
+          <HashLink smooth to="/portfolio/#about" className="TopbarButton">
             About Me
           </HashLink>
-          <Link className="TopbarButton" to="/projects">
+          <Link className="TopbarButton" to="/portfolio/projects">
             Projects
           </Link>
-          <Link className="TopbarButton" to="/skills">
+          <Link className="TopbarButton" to="/portfolio/skills">
             Skills
           </Link>
-          <Link className="TopbarButton" to="/blog">
+          <Link className="TopbarButton" to="/portfolio/blog">
             Blog
           </Link>
         </div>
@@ -28,21 +28,23 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
         <Fragment>
           <Menu toggled={open} toggle={setOpen} />
           {open && (
-            <div className='MenuContainer'>
-              <div
-                onClick={() => setOpen(!open)}
-              >
-                <TextTrail inView={open} quick className='TopbarButtons'>
-                  <HashLink smooth to="/#about" className="TopbarButton">
+            <div className="MenuContainer">
+              <div onClick={() => setOpen(!open)}>
+                <TextTrail inView={open} quick className="TopbarButtons">
+                  <HashLink
+                    smooth
+                    to="/portfolio/#about"
+                    className="TopbarButton"
+                  >
                     About Me
                   </HashLink>
-                  <Link className="TopbarButton" to="/projects">
+                  <Link className="TopbarButton" to="/portfolio/projects">
                     Projects
                   </Link>
-                  <Link className="TopbarButton" to="/skills">
+                  <Link className="TopbarButton" to="/portfolio/skills">
                     Skills
                   </Link>
-                  <Link className="TopbarButton" to="/blog">
+                  <Link className="TopbarButton" to="/portfolio/blog">
                     Blog
                   </Link>
                 </TextTrail>

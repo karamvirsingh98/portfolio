@@ -22,19 +22,19 @@ function App() {
     <div className="App">
       <Topbar mobile={mobile} />
       <Switch>
-        <Route path="/" exact>
+        <Route path="/portfolio">
           <div className="ScrollContainer">
             <HomePage mobile={mobile} />
             <AboutPage mobile={mobile} />
           </div>
         </Route>
-        <Route path="/projects">
+        <Route path="/portfolio/projects">
           <ProjectsPage mobile={mobile} />
         </Route>
-        <Route path="/skills">
+        <Route path="/portfolio/skills">
           <SkillsPage mobile={mobile} />
         </Route>
-        <Route path="/blog">
+        <Route path="/portfolio/blog">
           <div>Blog</div>
         </Route>
       </Switch>
