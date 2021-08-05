@@ -139,7 +139,7 @@ function SkillIcon({
     <Fragment>
       <a href={link} target="_blank" rel="noreferrer">
         <img
-          src={`/images/icons/${name}.svg`}
+          src={`./images/icons/${name}.svg`}
           alt={alt}
           style={{
             width: mobile ? "15vw" : "7.5vw",

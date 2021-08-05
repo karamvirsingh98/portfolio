@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Topbar mobile={mobile} />
       <Switch>
-        <Route path="/portfolio">
+        <Route path="/portfolio" exact>
           <div className="ScrollContainer">
             <HomePage mobile={mobile} />
             <AboutPage mobile={mobile} />
