@@ -26,8 +26,8 @@ export default function ProjectsPage({ mobile }: { mobile: boolean }) {
       <Project
         mobile={mobile}
         title="Ethics Olympiad App"
-        description="A single page Web App that was designed to facilitate Ethics Olympaid events, which are a co-curricular programme to promote philosophical enquiries by high school students. "
-        images={monitor}
+        description="A full-stack Web App that was designed to facilitate Ethics Olympaid events, which are a co-curricular programme to promote philosophical enquiries by high school students. "
+        images={olympaid}
       />
     </div>
   );
@@ -113,5 +113,32 @@ const monitor: image[] = [
   {
     src: "/images/projects/monitor/3.png",
     alt: "monitor",
+  },
+];
+
+const olympaid: image[] = [
+  {
+    src: "/images/projects/olympiad/1.png",
+    alt: "ethics olympiad",
+  },
+  {
+    src: "/images/projects/olympiad/2.png",
+    alt: "ethics olympiad",
+  },
+  {
+    src: "/images/projects/olympiad/3.png",
+    alt: "ethics olympiad",
+  },
+  {
+    src: "/images/projects/olympiad/4.png",
+    alt: "ethics olympiad",
+  },
+  {
+    src: "/images/projects/olympiad/5.png",
+    alt: "ethics olympiad",
+  },
+  {
+    src: "/images/projects/olympiad/6.png",
+    alt: "ethics olympiad",
   },
 ];
