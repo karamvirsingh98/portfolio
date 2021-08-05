@@ -10,16 +10,16 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
     <div className="Topbar" style={{ padding: mobile ? "1rem" : "1rem 2rem" }}>
       {!mobile && (
         <div className="TopbarButtons" style={{ gridAutoFlow: "column" }}>
-          <HashLink smooth to="/portfolio/#about" className="TopbarButton">
+          <HashLink smooth to="/#about" className="TopbarButton">
             About Me
           </HashLink>
-          <Link className="TopbarButton" to="/portfolio/projects">
+          <Link className="TopbarButton" to="/projects">
             Projects
           </Link>
-          <Link className="TopbarButton" to="/portfolio/skills">
+          <Link className="TopbarButton" to="/skills">
             Skills
           </Link>
-          <Link className="TopbarButton" to="/portfolio/blog">
+          <Link className="TopbarButton" to="/blog">
             Blog
           </Link>
         </div>
@@ -33,18 +33,18 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
                 <TextTrail inView={open} quick className="TopbarButtons">
                   <HashLink
                     smooth
-                    to="/portfolio/#about"
+                    to="/#about"
                     className="TopbarButton"
                   >
                     About Me
                   </HashLink>
-                  <Link className="TopbarButton" to="/portfolio/projects">
+                  <Link className="TopbarButton" to="/projects">
                     Projects
                   </Link>
-                  <Link className="TopbarButton" to="/portfolio/skills">
+                  <Link className="TopbarButton" to="/skills">
                     Skills
                   </Link>
-                  <Link className="TopbarButton" to="/portfolio/blog">
+                  <Link className="TopbarButton" to="/blog">
                     Blog
                   </Link>
                 </TextTrail>
