@@ -26,10 +26,10 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
       )}
       {mobile && (
         <Fragment>
-          <Menu toggled={open} toggle={setOpen} />
+          <div style={{zIndex: 10}}> <Menu toggled={open} toggle={setOpen} /> </div>
           {open && (
             <div className="MenuContainer">
-              <div onClick={() => setOpen(!open)}>
+              <div onClick={() => setOpen(!open)} style={{marginTop: '10vh'}}>
                 <TextTrail inView={open} quick className="TopbarButtons">
                   <HashLink
                     smooth

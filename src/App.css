@@ -26,11 +26,12 @@
 
 .MenuContainer {
   position: absolute;
-  top: 10vh;
+  top: 0;
   left: 0;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   background-color: #0D090A;
+  z-index: 5;
 }
 
 .TopbarButton { 
