@@ -5,8 +5,8 @@ export default function AboutPage({ mobile }: { mobile: boolean }) {
   const { ref, inView } = useInView({ threshold: 0 });
 
   return (
-    <div id="about" className="AboutPage ScrollChild" ref={ref}>
-      <TextTrail inView={inView} delay={100}>
+    <div id="about" className="ScrollChild" ref={ref}>
+      <TextTrail inView={inView} delay={100} className='AboutPage'>
         <div style={{ fontSize: mobile ? "13vw" : "10vw" }}>
           {" "}
           I'm Karamvir,{" "}

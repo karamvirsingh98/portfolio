@@ -19,7 +19,7 @@
 .TopbarButtons {
   font-size: 1.25rem;
   display: grid;
-  gap: 2rem;
+  gap: 2vw;
   text-decoration: none;
   place-items: center;
 }
@@ -42,7 +42,7 @@
 
 .TopbarButton:hover {
   color: #5C946E;
-  transition: color 50ms;
+  transition: color 100ms;
 }
 
 .ScrollContainer { 
@@ -70,6 +70,18 @@
   display: grid;
   gap: 2vw;
   padding: 0vw 5vw;
+}
+
+.ContactPage { 
+  display: grid;
+  gap: 5vw;
+  padding: 0vw 5vw;
+}
+
+.ContactButtons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5vw;
 }
 
 .SkillsPage {

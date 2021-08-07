@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ProjectsPage from "./components/pages/ProjectsPage";
 import SkillsPage from "./components/pages/SkillsPage";
+import ContactPage from "./components/pages/ContactPage";
 
 function App() {
   const [mobile, setMobile] = useState(window.innerWidth < 700 ? true : false);
@@ -26,6 +27,7 @@ function App() {
           <div className="ScrollContainer">
             <HomePage mobile={mobile} />
             <AboutPage mobile={mobile} />
+            <ContactPage mobile={mobile} />
           </div>
         </Route>
         <Route path="/projects">
@@ -33,9 +35,6 @@ function App() {
         </Route>
         <Route path="/skills">
           <SkillsPage mobile={mobile} />
-        </Route>
-        <Route path="/blog">
-          <div>Blog</div>
         </Route>
       </Switch>
     </div>

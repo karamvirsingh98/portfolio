@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import TextTrail from "./spring/TextTrail";
-import { Divide as Menu } from 'hamburger-react'
+import { Divide as Menu } from "hamburger-react";
 
 export default function Topbar({ mobile }: { mobile: boolean }) {
   const [open, setOpen] = useState(false);
@@ -19,34 +19,33 @@ export default function Topbar({ mobile }: { mobile: boolean }) {
           <Link className="TopbarButton" to="/skills">
             Skills
           </Link>
-          <Link className="TopbarButton" to="/blog">
-            Blog
-          </Link>
+          <HashLink smooth to="/#contact" className="TopbarButton">
+            Contact
+          </HashLink>
         </div>
       )}
       {mobile && (
         <Fragment>
-          <div style={{zIndex: 10}}> <Menu toggled={open} toggle={setOpen} /> </div>
+          <div style={{ zIndex: 10 }}>
+            {" "}
+            <Menu toggled={open} toggle={setOpen} />{" "}
+          </div>
           {open && (
             <div className="MenuContainer">
-              <div onClick={() => setOpen(!open)} style={{marginTop: '10vh'}}>
+              <div onClick={() => setOpen(!open)} style={{ marginTop: "10vh" }}>
                 <TextTrail inView={open} quick className="TopbarButtons">
-                  <HashLink
-                    smooth
-                    to="/#about"
-                    className="TopbarButton"
-                  >
+                  <HashLink smooth to="/#about" className="TopbarButton">
                     About Me
                   </HashLink>
-                  <Link className="TopbarButton" to="/projects">
+                  <Link to="/projects" className="TopbarButton">
                     Projects
                   </Link>
-                  <Link className="TopbarButton" to="/skills">
+                  <Link to="/skills" className="TopbarButton">
                     Skills
                   </Link>
-                  <Link className="TopbarButton" to="/blog">
-                    Blog
-                  </Link>
+                  <HashLink smooth to="/#contact" className="TopbarButton">
+                    Contact
+                  </HashLink>
                 </TextTrail>
               </div>
             </div>
