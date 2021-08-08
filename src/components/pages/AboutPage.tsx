@@ -34,11 +34,11 @@ export default function AboutPage({ mobile }: { mobile: boolean }) {
           style={{
             fontSize: mobile ? "7vw" : "2vw",
             fontWeight: 200,
-            padding: mobile ? "0vw 0vw 5vh 0vw" : "1vw 4vw",
+            padding: mobile ? "0vw 0vw 5vh 0vw" : "1vw 6vw",
           }}
         >
           When I'm not coding, I spend my time snowboarding,
-          {mobile ? "" : <br />} slacklining, and making music!
+          slacklining, and making music!
         </div>
       </TextTrail>
     </div>
