@@ -37,12 +37,17 @@
 .TopbarButton { 
   text-decoration: none;
   color: inherit;
+  border-style: none none solid none;
+  border-color: transparent;
   transition: color 500ms;
+  transition: border-color 500ms;
 }
 
 .TopbarButton:hover {
   color: #5C946E;
+  border-color: #5C946E;
   transition: color 100ms;
+  transition: border-color 200ms;
 }
 
 .ScrollContainer { 
@@ -84,6 +89,20 @@
   gap: 5vw;
 }
 
+.ContactButton {
+  color: #E6AACE;
+  border-bottom: 0.25rem solid #E6AACE;
+  transition: color 500ms;
+  transition: border-color 500ms;
+}
+
+.ContactButton:hover {
+  color: #CD519B;
+  border-bottom: 0.25rem solid #CD519B;
+  transition: color 250ms;
+  transition: border-color 250ms;
+}
+
 .SkillsPage {
   display: grid;
   width: 100%;
@@ -109,4 +128,10 @@
 .Project {
   padding: 0vw 5vw;
   display: grid;
+}
+
+@media only screen and (max-width: 700px) {
+  .TopbarButtons {
+    gap: 5vh;
+  }
 }

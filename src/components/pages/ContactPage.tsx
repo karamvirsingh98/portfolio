@@ -15,32 +15,7 @@ function ContactPage({ mobile }: { mobile: boolean }) {
           }}
         >
           You can contact me through{" "}
-          <a
-            href="mailto: karamvir.singh98@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "#E6AACE", textDecoration: "none" }}
-          >
-            Gmail
-          </a>
-          ,
-        </div>
-        <div
-          style={{
-            fontSize: mobile ? "10vw" : "5vw",
-            paddingLeft: mobile ? "0vw" : "4vw",
-            fontWeight: 300,
-          }}
-        >
-          Read my blog on{" "}
-          <a
-            href="https://medium.com"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "#E6AACE", textDecoration: "none" }}
-          >
-            Medium
-          </a>
+          <ContactLink text="Gmail" link="mailto: karamvir.singh98@gmail.com" />
           ,
         </div>
         <div
@@ -50,15 +25,18 @@ function ContactPage({ mobile }: { mobile: boolean }) {
             fontWeight: 300,
           }}
         >
+          Read my blog on{" "}
+          <ContactLink text="Medium" link="https://medium.com" />,
+        </div>
+        <div
+          style={{
+            fontSize: mobile ? "10vw" : "5vw",
+            paddingLeft: mobile ? "0vw" : "10vw",
+            fontWeight: 300,
+          }}
+        >
           And view my work on{" "}
-          <a
-            href="https://www.github.com/karamvirsingh98"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "#E6AACE", textDecoration: "none" }}
-          >
-            GitHub
-          </a>
+          <ContactLink text="GitHub" link="https://github.com/karamvirsingh98" />
           .
         </div>
       </TextTrail>
@@ -67,3 +45,19 @@ function ContactPage({ mobile }: { mobile: boolean }) {
 }
 
 export default ContactPage;
+
+function ContactLink({text, link}:{text: string, link: string}) {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      style={{
+        textDecoration: "none",
+      }}
+      className='ContactButton'
+    >
+      {text}
+    </a>
+  );
+}
