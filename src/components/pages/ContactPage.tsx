@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import TextTrail from "../spring/TextTrail";
 
-function ContactPage({ mobile }: { mobile: boolean }) {
+export default function ContactPage({ mobile }: { mobile: boolean }) {
   const { ref, inView } = useInView({ threshold: 0 });
 
   return (
@@ -43,8 +43,6 @@ function ContactPage({ mobile }: { mobile: boolean }) {
     </div>
   );
 }
-
-export default ContactPage;
 
 function ContactLink({text, link}:{text: string, link: string}) {
   return (

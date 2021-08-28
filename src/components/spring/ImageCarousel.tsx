@@ -1,13 +1,8 @@
 import { a, config, useTransition } from "@react-spring/web";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { CarouselImage } from "../../types";
 
-export type carouselImage = {
-  src: string;
-  alt: string;
-};
-
-export default function ImageCarousel({ images }: { images: carouselImage[] }) {
+export default function ImageCarousel({ images }: { images: CarouselImage[] }) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -16,7 +11,7 @@ export default function ImageCarousel({ images }: { images: carouselImage[] }) {
       10000
     );
     return () => clearTimeout(t);
-  }, []);
+  }, [images.length]);
 
   const transition = useTransition(current, {
     from: { opacity: 0, transform: "translateX(-100%)" },
@@ -59,10 +54,7 @@ export default function ImageCarousel({ images }: { images: carouselImage[] }) {
             <img
               src="./images/util/dot.svg"
               alt={`${i}`}
-              style={{
-                height: i === current ? "1.25vw" : "1vw",
-                opacity: i === current ? 1 : 0.5,
-              }}
+              className={i === current ? 'CarouselDotActive' : "CarouselDot"}
             />
           </div>
         ))}

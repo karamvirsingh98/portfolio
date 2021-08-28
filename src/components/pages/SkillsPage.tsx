@@ -1,70 +1,8 @@
 import { Fragment } from "react";
 import { useInView } from "react-intersection-observer";
 import TextTrail from "../spring/TextTrail";
-
-type Skill = {
-  name: string;
-  alt: string;
-  website?: string;
-};
-
-const known: Skill[] = [
-  {
-    name: "html",
-    alt: "html",
-  },
-  {
-    name: "css",
-    alt: "css",
-  },
-  {
-    name: "javascript",
-    alt: "javascript",
-  },
-  {
-    name: "typescript",
-    alt: "typescript",
-  },
-  {
-    name: "react",
-    alt: "reactjs",
-  },
-  {
-    name: "mongodb",
-    alt: "mongodb",
-  },
-  {
-    name: "feathers",
-    alt: "feathersjs",
-  },
-  {
-    name: "express",
-    alt: "expressjs",
-  },
-];
-
-const learning: Skill[] = [
-  {
-    name: "ethereum",
-    alt: "web3",
-  },
-  {
-    name: "rust",
-    alt: "rust",
-  },
-  {
-    name: "aws",
-    alt: "amazon web services",
-  },
-  {
-    name: "d3",
-    alt: "d3",
-  },
-  {
-    name: "firebase",
-    alt: "firebase",
-  },
-];
+import {known, learning} from '../../data/skills'
+import { Skill } from "../../types";
 
 export default function SkillsPage({ mobile }: { mobile: boolean }) {
   return (
@@ -116,6 +54,7 @@ function SkillsGrid({
             key={i}
             name={skill.name}
             alt={skill.alt}
+            link={skill.link}
             mobile={mobile}
           />
         ))}

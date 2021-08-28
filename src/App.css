@@ -37,8 +37,7 @@
 .TopbarButton { 
   text-decoration: none;
   color: inherit;
-  border-bottom: solid 0.15rem;
-  border-color: #eaf2efb1;
+  border-bottom: solid 0.15rem transparent;
   transition: color 500ms;
   transition: border-color 500ms;
 }
@@ -155,6 +154,20 @@
   grid-auto-flow: column;
   gap: 1vw;
   place-items: center;
+}
+
+.CarouselDot {
+  height: 1.25vw;
+  opacity: 0.5;
+  transition: height 1s;
+  transition: opacity 1s;
+}
+
+.CarouselDotActive {
+  height: 1.5vw;
+  opacity: 1;
+  transition: height 1s;
+  transition: opacity 1s;
 }
 
 @media only screen and (max-width: 700px) {

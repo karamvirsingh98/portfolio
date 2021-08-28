@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import ImageCarousel, { carouselImage } from "../spring/ImageCarousel";
+import { monitor, olympiad } from "../../data/projects";
+import { CarouselImage } from "../../types";
+import ImageCarousel from "../spring/ImageCarousel";
 import ImageSpring from "../spring/ImageSpring";
 import TextTrail from "../spring/TextTrail";
 
@@ -28,7 +29,7 @@ export default function ProjectsPage({ mobile }: { mobile: boolean }) {
         mobile={mobile}
         title="Ethics Olympiad App"
         description="A full-stack Web App that was designed to facilitate Ethics Olympaid events, which are a co-curricular programme to promote philosophical enquiries by high school students. "
-        images={olympaid}
+        images={olympiad}
       />
     </div>
   );
@@ -43,7 +44,7 @@ function Project({
   mobile: boolean;
   title?: string;
   description?: string;
-  images: carouselImage[];
+  images: CarouselImage[];
 }) {
   const { ref, inView } = useInView({ threshold: 0 });
 
@@ -76,40 +77,3 @@ function Project({
   );
 }
 
-const monitor: carouselImage[] = [
-  {
-    src: "./images/projects/monitor/1.png",
-    alt: "monitor",
-  },
-  {
-    src: "./images/projects/monitor/2.png",
-    alt: "monitor",
-  },
-  {
-    src: "./images/projects/monitor/3.png",
-    alt: "monitor",
-  },
-];
-
-const olympaid: carouselImage[] = [
-  {
-    src: "./images/projects/olympiad/1.png",
-    alt: "ethics olympiad",
-  },
-  {
-    src: "./images/projects/olympiad/2.png",
-    alt: "ethics olympiad",
-  },
-  {
-    src: "./images/projects/olympiad/3.png",
-    alt: "ethics olympiad",
-  },
-  {
-    src: "./images/projects/olympiad/4.png",
-    alt: "ethics olympiad",
-  },
-  {
-    src: "./images/projects/olympiad/5.png",
-    alt: "ethics olympiad",
-  }
-];
