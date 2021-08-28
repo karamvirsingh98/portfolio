@@ -1,5 +1,5 @@
 import { a, config, useTransition } from "@react-spring/web";
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 export type carouselImage = {

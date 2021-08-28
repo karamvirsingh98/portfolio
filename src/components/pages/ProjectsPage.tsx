@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import ImageCarousel, { carouselImage } from "../spring/ImageCarousel";
 import ImageSpring from "../spring/ImageSpring";
