@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import TextTrail from "./spring/TextTrail";
 import { Divide as Menu } from "hamburger-react";
-import { useRecoilState } from "recoil";
-import { topbarState } from "../state";
 import TopbarTransition from "./spring/TopbarTransition";
 
 export default function Topbar({ mobile}: { mobile: boolean }) {

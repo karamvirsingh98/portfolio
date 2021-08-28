@@ -20,5 +20,5 @@ export default function ImageSpring({
     config: config.molasses,
     delay: delay ? delay : 0,
   });
-  return <a.div style={styles}>{children}</a.div>;
+  return <a.div style={{...styles, width: '100%', height: '100%'}}>{children}</a.div>;
 }

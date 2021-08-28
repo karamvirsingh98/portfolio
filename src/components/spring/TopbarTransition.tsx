@@ -1,4 +1,4 @@
-import { a, config, useTransition } from "@react-spring/web";
+import { a, useTransition } from "@react-spring/web";
 import { ReactNode, Fragment } from "react";
 
 export default function TopbarTransition({

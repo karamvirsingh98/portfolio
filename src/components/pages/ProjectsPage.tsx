@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import ImageCarousel, { carouselImage } from "../spring/ImageCarousel";
 import ImageSpring from "../spring/ImageSpring";
 import TextTrail from "../spring/TextTrail";
 
@@ -42,7 +43,7 @@ function Project({
   mobile: boolean;
   title?: string;
   description?: string;
-  images: image[];
+  images: carouselImage[];
 }) {
   const { ref, inView } = useInView({ threshold: 0 });
 
@@ -57,8 +58,7 @@ function Project({
       ref={ref}
     >
       <ImageSpring inView={inView}>
-        {" "}
-        <ImageCarousel images={images} />{" "}
+        <ImageCarousel images={images} />
       </ImageSpring>
       <div>
         <TextTrail inView={inView} quick>
@@ -76,32 +76,7 @@ function Project({
   );
 }
 
-function ImageCarousel({ images }: { images: image[] }) {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(
-      () => setCurrent(current === images.length - 1 ? 0 : current + 1),
-      6000
-    );
-    return () => clearTimeout(t);
-  });
-
-  return (
-    <img
-      src={images[current].src}
-      alt={images[current].alt}
-      style={{ width: "100%", height: "100%" }}
-    />
-  );
-}
-
-type image = {
-  src: string;
-  alt: string;
-};
-
-const monitor: image[] = [
+const monitor: carouselImage[] = [
   {
     src: "./images/projects/monitor/1.png",
     alt: "monitor",
@@ -116,7 +91,7 @@ const monitor: image[] = [
   },
 ];
 
-const olympaid: image[] = [
+const olympaid: carouselImage[] = [
   {
     src: "./images/projects/olympiad/1.png",
     alt: "ethics olympiad",
@@ -136,9 +111,5 @@ const olympaid: image[] = [
   {
     src: "./images/projects/olympiad/5.png",
     alt: "ethics olympiad",
-  },
-  {
-    src: "./images/projects/olympiad/6.png",
-    alt: "ethics olympiad",
-  },
+  }
 ];
