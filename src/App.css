@@ -70,19 +70,22 @@
   padding: 0vw 5vw;
 }
 
-.AboutPage { 
+.AboutPage {
+  width: 100%; 
   display: grid;
   gap: 2vh;
   padding: 0vw 5vw;
 }
 
 .ContactPage { 
+  width: 100%;
   display: grid;
   gap: 5vw;
   padding: 0vw 5vw;
 }
 
 .ContactButtons {
+  width: 100%;
   display: grid;
   grid-auto-flow: column;
   gap: 5vw;
